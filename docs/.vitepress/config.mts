@@ -10,21 +10,23 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Curiosity', link: '/curiosity/' }
     ],
 
     sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    {
+      text: 'Curiosity',
+      items: [
+        { text: 'Overview', link: '/curiosity/' },
+        { text: 'Experiments', link: '/curiosity/experiments' },
+        { text: 'Questions', link: '/curiosity/questions' }
+      ]
+    }
+],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/aryasaumitra/digital-garden' }
+      { icon: 'github', link: 'https://github.com/aryasaumitra/' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/aryasaumitra22/' }
     ]
   }
 })

@@ -1,0 +1,17 @@
+.about-photo {
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 500px;
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.about-photo figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+  font-style: italic;
+}
