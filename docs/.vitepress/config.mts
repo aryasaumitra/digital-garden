@@ -2,10 +2,12 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/digital-garden/',
+
   title: "The Curious Generalist",
   description: "This website is my digital garden, a place where I document what I'm learning, building, reading, and exploring. You'll find notes on technology, systems, engineering, books, research papers, personal projects, and occasionally lessons learned from everyday work and life.",
+
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Examples', link: '/markdown-examples' }
@@ -22,7 +24,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/aryasaumitra/digital-garden' }
     ]
   }
 })
