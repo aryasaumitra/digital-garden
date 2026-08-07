@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# VitePress build output & cache
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# Lockfiles from other package managers (since you are using pnpm)
+package-lock.json
+yarn.lock
+
+# Logs & Environment
+*.log
+pnpm-debug.log*
+.env
+.env.*
+!.env.example
+
+# IDE & OS clutter
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
