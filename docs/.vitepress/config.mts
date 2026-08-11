@@ -10,18 +10,24 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Curiosity', link: '/curiosity/' }
+      { text: 'Curiosity', link: '/curiosity/' },
+      { text: 'Bookshelf', link: '/bookshelf/' }
     ],
 
     sidebar: [
     {
       text: 'Curiosity',
       items: [
-        { text: 'Overview', link: '/curiosity/' },
         { text: 'Experiments', link: '/curiosity/experiments' },
         { text: 'Questions', link: '/curiosity/questions' }
       ]
-    }
+    },
+    {
+        text: 'Bookshelf',
+        items: [
+          { text: 'Tiny Experiments', link: '/bookshelf/tiny-experiments' }
+        ]
+      }
 ],
 
     socialLinks: [
