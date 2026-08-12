@@ -14,21 +14,25 @@ export default defineConfig({
       { text: 'Bookshelf', link: '/bookshelf/' }
     ],
 
-    sidebar: [
-    {
-      text: 'Curiosity',
-      items: [
-        { text: 'Experiments', link: '/curiosity/experiments' },
-        { text: 'Questions', link: '/curiosity/questions' }
+    sidebar: {
+      '/curiosity/': [
+        {
+          text: 'Curiosity',
+          items: [
+            { text: 'Experiments', link: '/curiosity/experiments' },
+            { text: 'Questions', link: '/curiosity/questions' }
+          ]
+        }
+      ],
+      '/bookshelf/': [
+        {
+          text: 'Bookshelf',
+          items: [
+            { text: 'Tiny Experiments', link: '/bookshelf/tiny-experiments' }
+          ]
+        }
       ]
     },
-    {
-        text: 'Bookshelf',
-        items: [
-          { text: 'Tiny Experiments', link: '/bookshelf/tiny-experiments' }
-        ]
-      }
-],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/aryasaumitra/' },
