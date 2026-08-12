@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig, type DefaultTheme } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,29 +11,14 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Curiosity', link: '/curiosity/' },
-      { text: 'Bookshelf', link: '/bookshelf/' }
+      { text: 'Bookshelf', link: '/bookshelf/' },
+      { text: 'Data Engineering', link: '/data-engineering/'  }
     ],
 
     sidebar: {
-      '/curiosity/': [
-        {
-          text: 'Curiosity',
-          collapsed: false,
-          items: [
-            { text: 'Experiments', link: '/curiosity/experiments' },
-            { text: 'Questions', link: '/curiosity/questions' }
-          ]
-        }
-      ],
-      '/bookshelf/': [
-        {
-          text: 'Bookshelf',
-          collapsed: false,
-          items: [
-            { text: 'Tiny Experiments', link: '/bookshelf/tiny-experiments' }
-          ]
-        }
-      ]
+      '/curiosity/': sidebarCuriosity(),
+      '/bookshelf/': sidebarBookshelf(),
+      '/data-engineering/': sidebarDataEngineering()
     },
 
     socialLinks: [
@@ -42,3 +27,41 @@ export default defineConfig({
     ]
   }
 })
+
+
+function sidebarCuriosity(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Curiosity',
+      collapsed: false,
+      items: [
+        { text: 'Experiments', link: '/curiosity/experiments' },
+        { text: 'Questions', link: '/curiosity/questions' }
+      ]
+    }
+  ]
+}
+
+function sidebarBookshelf(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Bookshelf',
+      collapsed: false,
+      items: [
+        { text: 'Tiny Experiments', link: '/bookshelf/tiny-experiments' }
+      ]
+    }
+  ]
+}
+
+function sidebarDataEngineering(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Data-Engineering',
+      collapsed: false,
+      items: [
+        { text: 'Tiny Experiments', link: '/bookshelf/tiny-experiments' }
+      ]
+    }
+  ]
+}
