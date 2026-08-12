@@ -18,6 +18,7 @@ export default defineConfig({
       '/curiosity/': [
         {
           text: 'Curiosity',
+          collapsed: false,
           items: [
             { text: 'Experiments', link: '/curiosity/experiments' },
             { text: 'Questions', link: '/curiosity/questions' }
@@ -27,6 +28,7 @@ export default defineConfig({
       '/bookshelf/': [
         {
           text: 'Bookshelf',
+          collapsed: false,
           items: [
             { text: 'Tiny Experiments', link: '/bookshelf/tiny-experiments' }
           ]
