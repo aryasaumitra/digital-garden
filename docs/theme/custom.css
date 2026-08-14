@@ -57,3 +57,50 @@
     width: 150px;
   }
 }
+
+
+/* ==========================================================================
+   BLOG FEED CARD STYLING
+   ========================================================================== */
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+.blog-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+}
+
+.blog-card h2 {
+  margin: 0 0 0.5rem 0;
+  border-top: none;
+  font-size: 1.25rem;
+}
+
+.blog-card a {
+  text-decoration: none;
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+}
+
+.blog-card a:hover {
+  color: var(--vp-c-brand-1);
+}
+
+.post-meta {
+  font-size: 0.875rem;
+  color: var(--vp-c-text-2);
+  margin-bottom: 0.5rem;
+}

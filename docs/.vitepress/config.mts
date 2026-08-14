@@ -1,4 +1,5 @@
 import { defineConfig, type DefaultTheme } from 'vitepress'
+import { generateSidebar } from 'vitepress-sidebar'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -10,16 +11,53 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Curiosity', link: '/curiosity/' },
+      { text: 'Blog & Notes', link: '/blog/' },
       { text: 'Bookshelf', link: '/bookshelf/' },
       { text: 'Data Engineering', link: '/data-engineering/'  }
     ],
 
-    sidebar: {
-      '/curiosity/': sidebarCuriosity(),
-      '/bookshelf/': sidebarBookshelf(),
-      '/data-engineering/': sidebarDataEngineering()
-    },
+    // sidebar: {
+    //   '/curiosity/': sidebarCuriosity(),
+    //   '/bookshelf/': sidebarBookshelf(),
+    //   '/data-engineering/': sidebarDataEngineering()
+    // },
+    sidebar: generateSidebar([
+      {
+        documentRootPath: 'docs',
+        scanStartPath: 'blog',
+        resolvePath: '/blog/',
+        collapsed: true,             // Collapse nested folder sections by default
+      capitalizeFirst: true,       // Capitalize folder and file titles if frontmatter title is missing
+      useTitleFromFileHeading: true, // Use the first H1 (# Title) inside the file as the sidebar label
+      useTitleFromFrontmatter: true, // Prefer title from frontmatter if available
+      hyphenToSpace: true,         // Convert `my-nested-note.md` to "My Nested Note"
+      underscoreToSpace: true,
+      },
+      {
+        documentRootPath: 'docs',
+        scanStartPath: 'bookshelf',
+        resolvePath: '/bookshelf/',
+        collapsed: true,             // Collapse nested folder sections by default
+      capitalizeFirst: true,       // Capitalize folder and file titles if frontmatter title is missing
+      useTitleFromFileHeading: true, // Use the first H1 (# Title) inside the file as the sidebar label
+      useTitleFromFrontmatter: true, // Prefer title from frontmatter if available
+      hyphenToSpace: true,         // Convert `my-nested-note.md` to "My Nested Note"
+      underscoreToSpace: true,
+        
+      },
+      {
+        documentRootPath: 'docs',
+        scanStartPath: 'data-engineering',
+        resolvePath: '/data-engineering/',
+        collapsed: true,             // Collapse nested folder sections by default
+      capitalizeFirst: true,       // Capitalize folder and file titles if frontmatter title is missing
+      useTitleFromFileHeading: true, // Use the first H1 (# Title) inside the file as the sidebar label
+      useTitleFromFrontmatter: true, // Prefer title from frontmatter if available
+      hyphenToSpace: true,         // Convert `my-nested-note.md` to "My Nested Note"
+      underscoreToSpace: true,
+  
+      }
+    ]),
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/aryasaumitra/' },
@@ -60,7 +98,11 @@ function sidebarDataEngineering(): DefaultTheme.SidebarItem[] {
       text: 'Data-Engineering',
       collapsed: false,
       items: [
-        { text: 'Tiny Experiments', link: '/bookshelf/tiny-experiments' }
+        { text: 'Snowflake', 
+          link: '/data-engineering/snowflake',
+          collapsed: false
+
+        }
       ]
     }
   ]

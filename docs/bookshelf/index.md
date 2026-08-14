@@ -4,7 +4,7 @@ Books I've read, am reading, or want to explore.
 
 ## Currently Reading
 
-- 
+- [Tested](./tested)
 
 ## Recently Read
 
