@@ -1,3 +1,12 @@
+---
+title: ""
+date: ""
+author: ""
+summary: ""
+times-read: 0
+---
+
+
 <div class="book-header">
 
 <div class="book-info">
