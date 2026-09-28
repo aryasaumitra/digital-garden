@@ -8,4 +8,4 @@ tags: ["IT Operations","Reliability"]
 # What is Observability ?
 
 
-By definition of control theory, its the ability to understand a system's internal state by looking at its external outputs and the data it produces
+By definition of control theory, its the ability to understand a system's internal state by looking at its external outputs and the data it produces.
