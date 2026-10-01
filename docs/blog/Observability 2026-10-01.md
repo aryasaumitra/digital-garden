@@ -1,7 +1,8 @@
 ---
 title: "What is Observability ?"
-date: "2026-08-15"
+date: "2026-10-01"
 author: "Arya Saumitra"
+status: "Complete"
 tags: ["IT Operations","Reliability"]
 ---
 
@@ -26,7 +27,7 @@ Every interaction with the System is an event and when things go wrong our first
 
 Lets go over the 3 Pillars of Observability and what kind of answers it provides
 
-## Metrics: Answers the "What" of the system
+## Metrics: "What" of the system
 
 Metric is a number which we can aggregate over time and keep track of like you car speedometer it tells you current speed and average speed of the drive. They are lightweight easy to collect and store in a timeseries database and give you clean overview of the system wide trends
 
@@ -40,7 +41,7 @@ Metrics are good at telling you something went wrong and useless at telling you 
 
 So we move on to the next pillar.
 
-## Traces: Answers the "Where" of the system
+## Traces: "Where" of the system
 
 A Trace follows a request end to end. Like a parcel tracked from a warehouse to an end user with a single tracking number. Every scanner in the way updates the same tracking number so that once you pull up a journey history you can track the full picture.
 
@@ -48,11 +49,26 @@ Each scan along the way is called a Span. A span is a unit of work, a database q
 
 Example an ecommerece application where a metric says the user faced slowness in checkout time, only a trace could tell that 92% of the time was spent querying the inventory database and all other services ran under 10ms
 
-Traces depend on every service being tracked by instrumentation if one services is skipped the entire traces is useless. Traces generate a lot of data so storing and setting up retention times is critical. Traces earn there value when a single request crosses multiple service boundaries. 
-
+Traces depend on every service being tracked by instrumentation if one services is skipped the entire traces is useless. 
 We need the last pillar which would answer the fix
 
-## Logs: Answers the "Why" of the system
+## Logs: "Why" of the system
+
+A log is written entry for one specific thing that happened in a moment with a timestamp and extra context the engineer decided to add. When something breaks at a specific moment the log is where the why is hidden. 
+
+Modern applications generates tons of logs and storing them is full on challenge for enterprise data teams. Fintech applications are so integrated with so many 3rd Party API that they generate GBs and TBs of log file in a single day.
+
+Parsing of all the log files becomes a pain if you have not enriched it with a trace ID from the traces. An engineer would be running grep and on million of log files and praying for the right ones. 
+
+A trace ID stamped onto every log line emitted during that request. So in a single click we can pull up a slow span with the exact log to explain what went sideways
+
+
+## How the three work together
+
+Metrics raises a flag, The trace narrows it down to a service and the log finishes the story. Put these three together and you can rebuild the system behaviour. Pull any one of the three signal and the chain stops working. Without the metric the alert never fires, without the traces the team is finding a needle in haystack of logs. Logs in itself is useless without the 2.
+
+Nobody sets up all on the same day. The realistic order is Metrics, Logs and Traces. Traces generate a lot of data so storing and setting up retention times is critical. Traces earn there value when a single request crosses multiple service boundaries not in monolitihic applications
+
 
 
 
