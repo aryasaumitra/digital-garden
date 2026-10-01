@@ -3,8 +3,7 @@ layout: home
 
 hero:
   name: The Curious Generalist
-  text: Notes on technology, systems, engineering, books, research, and the things I'm curious about.
-  tagline: Learning deeply. Explaining simply.
+  tagline: Notes on technology, systems, engineering, books, research, and the things I'm curious about with a simple mantra: Learning deeply. Explaining simply.
   actions:
     - theme: brand
       text: LinkedIn

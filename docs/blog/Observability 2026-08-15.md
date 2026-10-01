@@ -48,6 +48,12 @@ Each scan along the way is called a Span. A span is a unit of work, a database q
 
 Example an ecommerece application where a metric says the user faced slowness in checkout time, only a trace could tell that 92% of the time was spent querying the inventory database and all other services ran under 10ms
 
-Traces depend on every service being tracked by instrumentation if one services is skipped the entire traces is useless. Traces generate a lot of data so storing and setting up retention times is critical. Traces earn there value when a single request crosses multiple service boundaries
+Traces depend on every service being tracked by instrumentation if one services is skipped the entire traces is useless. Traces generate a lot of data so storing and setting up retention times is critical. Traces earn there value when a single request crosses multiple service boundaries. 
+
+We need the last pillar which would answer the fix
+
+## Logs: Answers the "Why" of the system
+
+
 
 
